@@ -64,10 +64,10 @@ from twilio.rest import Client
 
 
 # --- Twilio Configuration ---
-TWILIO_SID = 'TWILIO_SID'
-TWILIO_AUTH_TOKEN = 'TWILIO_AUTH_TOKEN'
-TWILIO_NUMBER = 'TWILIO_NUMBER'  # Your Twilio number
-PARENT_NUMBERS = ['+919908342934']  # Hardcoded list
+TWILIO_SID = os.getenv('TWILIO_SID')
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
+TWILIO_NUMBER = os.getenv('TWILIO_NUMBER')
+PARENT_NUMBERS = os.getenv('PARENT_NUMBERS', '').split(',')
 
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
 
