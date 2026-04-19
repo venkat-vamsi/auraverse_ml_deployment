@@ -56,15 +56,17 @@
 
 # interface.launch(server_name="0.0.0.0", server_port=7860)
 
+import os
 import gradio as gr
 import joblib
 import numpy as np
 from twilio.rest import Client
 
+
 # --- Twilio Configuration ---
-TWILIO_SID = 'ACf2dfeaba2cb9f97201e17959c5ab9e92'
-TWILIO_AUTH_TOKEN = '8f9f1fb0b7f45ede91039dffb8060cd9'
-TWILIO_NUMBER = '+1 570 989 5768'  # Your Twilio number
+TWILIO_SID = 'TWILIO_SID'
+TWILIO_AUTH_TOKEN = 'TWILIO_AUTH_TOKEN'
+TWILIO_NUMBER = 'TWILIO_NUMBER'  # Your Twilio number
 PARENT_NUMBERS = ['+919908342934']  # Hardcoded list
 
 client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
