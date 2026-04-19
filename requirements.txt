@@ -1,4 +1,5 @@
 gradio
 joblib
 numpy
+twilio
 scikit-learn
